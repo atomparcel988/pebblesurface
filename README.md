@@ -1,4 +1,4 @@
-# uri-parse-912ccc
+# uri-parse-1fd88e
 
 A Rust uri-parse utility.
 
